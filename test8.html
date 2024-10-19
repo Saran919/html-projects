@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate Two Names</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>ADD Two Names</h2>
+    <input type="text" id="name1" placeholder="Enter first name">
+    <input type="text" id="name2" placeholder="Enter second name">
+    <button onclick="concatenateNames()">Add</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function concatenateNames() {
+        var name1 = document.getElementById("name1").value;
+        var name2 = document.getElementById("name2").value;
+
+        if (name1 === "" || name2 === "") {
+            alert("Please enter both names.");
+            return;
+        }
+
+        var concatenatedNames = name1 + " " + name2;
+        document.getElementById("result").textContent = "Name: " + concatenatedNames;
+    }
+</script>
+
+</body>
+</html>

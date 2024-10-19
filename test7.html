@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> pallothu Family </title>
+    <style>
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #121212;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            font-size: 13px;
+            color: #171717;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>pallothu Family</h2>
+
+<!-- Root -->
+<button type="button" class="collapsible">PALLOTHU RAMA RAO</button>
+<div class="content">
+    <button type="button" class="collapsible">+</button>
+    <div class="content">
+            <button type="button" class="collapsible">PALLOTHU Murali krishna</button>
+        <div class="content">
+            <button type="button" class="collapsible">PALLOTHU GAGAN SURYA</button>
+        <div class="content">
+        </div>
+        <button type="button" class="collapsible">PALLOYHU SARAN SRINIVAS</button>
+        <div class="content">
+        </div>
+    </div>
+    <button type="button" class="collapsible">OMKAR PALLOTHU</button>
+    <div class="content">
+        <button type="button" class="collapsible">PANAV PALLOTHU</button>
+        <div class="content">
+        </div>
+        <button type="button" class="collapsible">NAYAN PALLOYHU</button>
+        <div class="content">
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
